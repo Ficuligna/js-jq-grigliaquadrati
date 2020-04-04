@@ -1,0 +1,27 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.tablecontainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vh;
+  height: 80vh;
+}
+.square{
+  width: calc(100%/8);
+  height: calc(100%/8);
+  border: 1px solid black;
+  background-color: green;
+}
+.red{
+  background-color: red;
+}
