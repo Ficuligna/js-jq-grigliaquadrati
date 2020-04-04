@@ -11,6 +11,8 @@
   height: 100vh;
 }
 .tablecontainer{
+  justify-content: center;
+  align-content: center;
   display: flex;
   flex-wrap: wrap;
   width: 80vh;
@@ -24,4 +26,10 @@
 }
 .red{
   background-color: red;
+}
+.startClass{
+  background-color: white;
+}
+button{
+  width: 100px;
 }
