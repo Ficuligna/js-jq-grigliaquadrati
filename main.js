@@ -7,7 +7,7 @@ var sceltautente = prompt("scegli difficoltà");
 
 makeSquare(sceltautente);
 $(".tablecontainer").html(ring);
-redClass(makeSquare(sceltautente),randomBox15(makeSquare(sceltautente)))
+redClass(makeSquare(sceltautente),randomBox15(makeSquare(sceltautente),15))
 
 
 
@@ -41,26 +41,23 @@ function makeSquare(difficult){
       ring+= "<div class='square'></div>";
     };
   };
-  randomBox15(nSquare)
+  randomBox15(nSquare,15)
   return nSquare;
 };
 //creazione array index random per elementi classe "red"
-function randomBox15(numSquare){  // passare nSquare
+function randomBox15(numSquare,x){  // passare nSquare
   var redSquareIndex;
   var redSquareRandomBox = [];
-  var condizionePusher = true;
-  while (redSquareRandomBox.length <15) {
+  while (redSquareRandomBox.length <x) {
     redSquareIndex = Math.floor(Math.random()*numSquare);
-
+    var condizionePusher = true;
     for (var i = 0; i < redSquareRandomBox.length; i++) {
-      if (redSquareIndex != redSquareRandomBox[i]) {
-        condizionePusher = true;
-      }else{
-        condizionePusher = false
+      if (redSquareIndex == redSquareRandomBox[i]) {
+        condizionePusher = false;
       }
     };
     if (condizionePusher) {
-      redSquareRandomBox.push(redSquareIndex)
+      redSquareRandomBox.push(redSquareIndex);
     }
   }
   return redSquareRandomBox;
@@ -81,7 +78,6 @@ function redClass(elementi,confronto){  //passare valore di makeSquare , randomB
   };
 }
 
-console.log($(".square").eq(0).addClass("red"));
 
 
 
