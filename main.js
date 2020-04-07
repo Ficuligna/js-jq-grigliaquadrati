@@ -2,6 +2,14 @@ $(document).ready(function(){
 
 var ricomincia = $(".tablecontainer").html();
 
+iniziaGioco();
+
+function iniziaGioco() {
+
+
+
+$(".tablecontainer").html(ricomincia);
+
 $("button:nth-child(1)").click(function(){
 
   makeSquare("easy");
@@ -15,7 +23,8 @@ $("button:nth-child(1)").click(function(){
   });
 
   $(".ricomincia").click(function(){
-    $(".tablecontainer").html(ricomincia);
+
+    iniziaGioco();
 
   });
 
@@ -33,7 +42,8 @@ $("button:nth-child(2)").click(function(){
   });
 
   $(".ricomincia").click(function(){
-    $(".tablecontainer").html(ricomincia);
+    //$(".tablecontainer").html(ricomincia);
+    iniziaGioco();
   });
 
 });
@@ -50,10 +60,13 @@ $("button:nth-child(3)").click(function(){
   });
 
   $(".ricomincia").click(function(){
-    $(".tablecontainer").html(ricomincia);
+    //$(".tablecontainer").html(ricomincia);
+    iniziaGioco();
   });
 
 });
+
+}
 
 
 

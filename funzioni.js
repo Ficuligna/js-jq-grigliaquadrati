@@ -4,6 +4,9 @@ var ring="";
 
 //creazione quadrati
 function makeSquare(difficult){
+
+  ring = "";
+
   var nSquare = 0;
   if (difficult == "easy") {
     nSquare = 36;
